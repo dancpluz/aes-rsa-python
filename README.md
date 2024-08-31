@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Este repositório contém a implementação do trabalho de segurança computacional, dividido em duas partes principais:
+Este repositório contém a implementação do trabalho de segurança computacional, disciplina do meu 6º semestre de Ciência da Computação na Universidade de Brasília, dividido em duas partes principais:
 
 ### **Parte I - Cifra de Bloco e Modo de Operação CTR**
 
