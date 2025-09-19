@@ -1,50 +1,100 @@
-# Implementação de AES-CTR e RSA com Assinatura Digital - CIC0201 Segurança Computacional 2024/1
+<p align="center">
+  <picture>
+    <img src="encrypt.gif" width="25%">
+  </picture>
+</p>
 
-## Descrição do Projeto
+## 📚 Sobre
 
-Este repositório contém a implementação do trabalho de segurança computacional, disciplina do meu 6º semestre de Ciência da Computação na Universidade de Brasília, dividido em duas partes principais:
+Este repositório contém a implementação do projeto final para a disciplina de **Segurança Computacional (CIC0201)** da **Universidade de Brasília (UnB)**. O trabalho, desenvolvido durante meu 6º semestre em Ciência da Computação, foca na criação de ferramentas criptográficas e na exploração de seus princípios fundamentais.
 
-### **Parte I - Cifra de Bloco e Modo de Operação CTR**
+O projeto é dividido em duas partes principais: uma para **criptografia simétrica** e outra para **criptografia assimétrica com assinatura digital**. Através da implementação dos algoritmos **AES** e **RSA**, pude aprofundar meu entendimento sobre como a teoria por trás da segurança de dados se aplica na prática, desde a cifração de blocos até a geração de chaves e verificação de assinaturas digitais.
 
-1. **Etapa I:** Implementação da cifra de bloco AES com bloco de 128 bits e chave de 128 bits. A implementação permite especificar o número de rodadas de cifração/decifração.
-   
-2. **Etapa II:** Implementação do modo de operação CTR (Counter Mode) utilizando a cifra AES implementada anteriormente.
+Essa experiência foi crucial para solidificar o conhecimento sobre temas como modos de operação, integridade de dados e autenticação, demonstrando o poder dessas ferramentas para proteger informações em um ambiente digital.
 
-3. **Extra 1:** Implementação do modo de cifração autenticada GCM (Galois/Counter Mode) para AES.
+## 📌 Funcionalidades
 
-4. **Testes:** Cifração e decifração de um arquivo para validação da implementação.
+### Criptografia Simétrica (AES-CTR/GCM)
 
-5. **Extra 2:** Cifração de uma selfie no modo CTR com diferentes números de rodadas do AES (1, 5, 9, e 13 rodadas). Resultados renderizados e anexados ao relatório.
+- **Cifra de Bloco AES:** Implementação da cifra de bloco AES com chave e bloco de 128 bits.
+- **Modo de Operação CTR:** Utilização do modo `Counter (CTR)` para cifrar e decifrar arquivos de qualquer tamanho.
+- **Modo GCM Autenticado:** Implementação extra do modo `Galois/Counter Mode (GCM)` para garantir a autenticidade e integridade dos dados.
+- **Testes Visuais:** Cifração de uma imagem (`selfie.jpg`) com diferentes números de rodadas do AES para demonstrar o efeito do algoritmo.
 
-### **Parte II - Gerador/Verificador de Assinaturas RSA**
+### Criptografia Assimétrica e Assinatura Digital (RSA)
 
-1. **Etapa I:** Implementação da geração de chaves RSA (com primos de no mínimo 1024 bits) e cifração/decifração assimétrica RSA.
+- **Geração de Chaves RSA:** Criação de chaves públicas e privadas com primos de 1024 bits ou mais.
+- **Cifração/Decifração RSA:** Implementação dos processos assimétricos de cifração e decifração.
+- **Assinatura Digital:** Cálculo de `hash (SHA-3)` e criação de uma assinatura digital para um documento.
+- **Verificação de Assinatura:** Processo de verificação de documentos assinados para autenticidade.
 
-2. **Etapa II:** Implementação da assinatura digital:
-   - Cálculo de hashes (SHA-3)
-   - Assinatura da mensagem
-   - Formatação em BASE64
+## 🛠 Feito Com
 
-3. **Etapa III:** Implementação da verificação da assinatura:
-   - Parsing do documento assinado
-   - Decifração da assinatura e verificação do hash
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=py,aes,rsa,sha" />
+</p>
 
-## Instruções de Uso
+- **Linguagem:** Python
+- **Algoritmos:** AES, RSA, SHA-3
+- **Bibliotecas:** `hashlib`, `PIL (Pillow)`
 
-Este repositório possui os scripts separados para as diferentes etapas de forma modular. Aqui se encontram scripts de testes e implementação para ambos os algoritmos, assim como, os arquivos usados nos testes, o relatório desenvolvido e a especificação do trabalho.
+## 👨‍💻 Como Rodar
 
-Para os scripts funcionarem corretamente, é necessário instalar as seguintes bibliotecas:
+### Pré-requisitos
+
+Certifique-se de que você tem o **Python 3** instalado.
+
+### Instalação de Dependências
+
+Instale as bibliotecas necessárias usando `pip`:
+
+```bash
+pip install Pillow
+````
+
+```bash
+pip install cryptography
 ```
-pip install hashlib
-pip install PIL
+
+*(As bibliotecas `hashlib` e `os` já vêm instaladas com o Python padrão.)*
+
+### Instruções de Uso
+
+Os scripts são modulares e podem ser executados separadamente. Os arquivos necessários para os testes estão nas pastas `AES/arquivos/` e `RSA/arquivos/`.
+
+Exemplo de execução dos scripts de testes:
+
+```bash
+python AES/aes_test.py
 ```
 
-Caso deseja rodar todos os testes novamente, é recomendado que mantenha somente os arquivos vitais para gerar o restante dos outros arquivos de saída. Segue a lista dos arquivos vitais para o funcionamento:
+```bash
+python RSA/rsa_test.py
+```
 
-- `/AES/arquivos/selfie.jpg`
-- `/AES/arquivos/texto.txt`
-- `/AES/arquivos/texto_cifrado_openssl.bin`
-- `/AES/arquivos/selfie_cifrado_openssl.bin`
-- `/RSA/arquivos/selfie.jpg`
-- `/RSA/arquivos/texto.txt`
-- `/RSA/arquivos/doc.pdf`
+## 👥 Autor
+
+Este projeto foi desenvolvido por:
+
+  - **Daniel Luz** — [GitHub](https://github.com/dancpluz)
+
+## 🤝 Contribuições / Agradecimentos
+
+Este projeto foi realizado para a disciplina de **Segurança Computacional** no Departamento de Ciência da Computação da **Universidade de Brasília (UnB)**.
+
+  - **Relatório Técnico:** O relatório completo do trabalho, com toda a fundamentação teórica e detalhes da implementação, pode ser acessado em: [https://www.overleaf.com/read/bfchdyydqrmv\#dbb63d](https://www.overleaf.com/read/bfchdyydqrmv#dbb63d).
+
+## ⚠ Status
+
+Este trabalho está completo para fins acadêmicos.
+
+<details>
+<summary>Clique para ver a lista</summary>
+
+  - [x] Implementação da cifra AES (128 bits).
+  - [x] Implementação do modo de operação CTR.
+  - [x] Implementação da cifra assimétrica RSA (1024+ bits).
+  - [x] Implementação de Assinaturas Digitais.
+  - [x] Geração e verificação de hashes SHA-3.
+
+</details>
