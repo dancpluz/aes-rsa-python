@@ -4,49 +4,53 @@
   </picture>
 </p>
 
-## 📚 Sobre
+## 📚 About
 
-Este repositório contém a implementação do projeto final para a disciplina de **Segurança Computacional (CIC0201)** da **Universidade de Brasília (UnB)**. O trabalho, desenvolvido durante meu 6º semestre em Ciência da Computação, foca na criação de ferramentas criptográficas e na exploração de seus princípios fundamentais.
+<picture>
+  <img src="https://cdn.rawgit.com/dancpluz/aes-rsa-python/main/assets/encryption-demo.gif" align="right" width="40%"/>
+</picture>
 
-O projeto é dividido em duas partes principais: uma para **criptografia simétrica** e outra para **criptografia assimétrica com assinatura digital**. Através da implementação dos algoritmos **AES** e **RSA**, pude aprofundar meu entendimento sobre como a teoria por trás da segurança de dados se aplica na prática, desde a cifração de blocos até a geração de chaves e verificação de assinaturas digitais.
+This repository contains the final project implementation for the **Computer Security (CIC0201)** course at the **University of Brasília (UnB)**. Developed during my 6th semester in Computer Science, the project focuses on creating cryptographic tools and exploring their fundamental principles.
 
-Essa experiência foi crucial para solidificar o conhecimento sobre temas como modos de operação, integridade de dados e autenticação, demonstrando o poder dessas ferramentas para proteger informações em um ambiente digital.
+The project is divided into two main parts: one for **symmetric cryptography** and one for **asymmetric cryptography with digital signatures**. By implementing the **AES** and **RSA** algorithms, I was able to deepen my understanding of how the theory behind data security is applied in practice, from block encryption to key generation and digital signature verification.
 
-## 📌 Funcionalidades
+This experience was crucial for solidifying my knowledge of topics such as modes of operation, data integrity, and authentication, demonstrating the power of these tools to protect information in a digital environment.
 
-### Criptografia Simétrica (AES-CTR/GCM)
+## 📌 Features
 
-- **Cifra de Bloco AES:** Implementação da cifra de bloco AES com chave e bloco de 128 bits.
-- **Modo de Operação CTR:** Utilização do modo `Counter (CTR)` para cifrar e decifrar arquivos de qualquer tamanho.
-- **Modo GCM Autenticado:** Implementação extra do modo `Galois/Counter Mode (GCM)` para garantir a autenticidade e integridade dos dados.
-- **Testes Visuais:** Cifração de uma imagem (`selfie.jpg`) com diferentes números de rodadas do AES para demonstrar o efeito do algoritmo.
+### Symmetric Cryptography (AES-CTR/GCM)
 
-### Criptografia Assimétrica e Assinatura Digital (RSA)
+- **AES Block Cipher:** Implementation of the AES block cipher with 128-bit key and block sizes.
+- **CTR Mode of Operation:** Use of `Counter Mode (CTR)` to encrypt and decrypt files of any size.
+- **Authenticated GCM Mode:** An extra implementation of `Galois/Counter Mode (GCM)` to ensure data authenticity and integrity.
+- **Visual Tests:** Encryption of a picture (`selfie.jpg`) with varying numbers of AES rounds to demonstrate the algorithm's effect.
 
-- **Geração de Chaves RSA:** Criação de chaves públicas e privadas com primos de 1024 bits ou mais.
-- **Cifração/Decifração RSA:** Implementação dos processos assimétricos de cifração e decifração.
-- **Assinatura Digital:** Cálculo de `hash (SHA-3)` e criação de uma assinatura digital para um documento.
-- **Verificação de Assinatura:** Processo de verificação de documentos assinados para autenticidade.
+### Asymmetric Cryptography and Digital Signatures (RSA)
 
-## 🛠 Feito Com
+- **RSA Key Generation:** Creation of public and private keys with primes of 1024 bits or more.
+- **RSA Encryption/Decryption:** Implementation of the asymmetric encryption and decryption processes.
+- **Digital Signature:** `SHA-3 hash` calculation and creation of a digital signature for a document.
+- **Signature Verification:** The process of verifying signed documents for authenticity.
+
+## 🛠 Built With
 
 <p align="left">
   <img src="https://skillicons.dev/icons?i=py,aes,rsa,sha" />
 </p>
 
-- **Linguagem:** Python
-- **Algoritmos:** AES, RSA, SHA-3
-- **Bibliotecas:** `hashlib`, `PIL (Pillow)`
+- **Language:** Python
+- **Algorithms:** AES, RSA, SHA-3
+- **Libraries:** `hashlib`, `PIL (Pillow)`
 
-## 👨‍💻 Como Rodar
+## 👨‍💻 How to Run
 
-### Pré-requisitos
+### Prerequisites
 
-Certifique-se de que você tem o **Python 3** instalado.
+Make sure you have **Python 3** installed.
 
-### Instalação de Dependências
+### Installing Dependencies
 
-Instale as bibliotecas necessárias usando `pip`:
+Install the necessary libraries using `pip`:
 
 ```bash
 pip install Pillow
@@ -56,13 +60,13 @@ pip install Pillow
 pip install cryptography
 ```
 
-*(As bibliotecas `hashlib` e `os` já vêm instaladas com o Python padrão.)*
+*(The `hashlib` and `os` libraries come pre-installed with standard Python.)*
 
-### Instruções de Uso
+### Usage Instructions
 
-Os scripts são modulares e podem ser executados separadamente. Os arquivos necessários para os testes estão nas pastas `AES/arquivos/` e `RSA/arquivos/`.
+The scripts are modular and can be run separately. The necessary files for the tests are located in the `AES/arquivos/` and `RSA/arquivos/` folders.
 
-Exemplo de execução dos scripts de testes:
+Example of how to run the test scripts:
 
 ```bash
 python AES/aes_test.py
@@ -72,29 +76,25 @@ python AES/aes_test.py
 python RSA/rsa_test.py
 ```
 
-## 👥 Autor
+## 👥 Author
 
-Este projeto foi desenvolvido por:
+This project was developed by:
 
   - **Daniel Luz** — [GitHub](https://github.com/dancpluz)
 
-## 🤝 Contribuições / Agradecimentos
+## 🤝 Contributions / Acknowledgements
 
-Este projeto foi realizado para a disciplina de **Segurança Computacional** no Departamento de Ciência da Computação da **Universidade de Brasília (UnB)**.
+This project was carried out for the **Computer Security** course in the Computer Science Department at the **University of Brasília (UnB)**.
 
-  - **Relatório Técnico:** O relatório completo do trabalho, com toda a fundamentação teórica e detalhes da implementação, pode ser acessado em: [https://www.overleaf.com/read/bfchdyydqrmv\#dbb63d](https://www.overleaf.com/read/bfchdyydqrmv#dbb63d).
-
-## ⚠ Status
-
-Este trabalho está completo para fins acadêmicos.
+  - **Technical Report:** The complete project report, with all the theoretical background and implementation details, can be accessed at: [https://www.overleaf.com/read/bfchdyydqrmv\#dbb63d](https://www.overleaf.com/read/bfchdyydqrmv#dbb63d).
 
 <details>
-<summary>Clique para ver a lista</summary>
+  <summary>Click to view status</summary>
 
-  - [x] Implementação da cifra AES (128 bits).
-  - [x] Implementação do modo de operação CTR.
-  - [x] Implementação da cifra assimétrica RSA (1024+ bits).
-  - [x] Implementação de Assinaturas Digitais.
-  - [x] Geração e verificação de hashes SHA-3.
+  - [x] Implementation of the AES cipher (128 bits).
+  - [x] Implementation of CTR mode of operation.
+  - [x] Implementation of the RSA asymmetric cipher (1024+ bits).
+  - [x] Implementation of Digital Signatures.
+  - [x] Generation and verification of SHA-3 hashes.
 
 </details>
