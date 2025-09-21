@@ -6,10 +6,6 @@
 
 ## 📚 About
 
-<picture>
-  <img src="https://cdn.rawgit.com/dancpluz/aes-rsa-python/main/assets/encryption-demo.gif" align="right" width="40%"/>
-</picture>
-
 This repository contains the final project implementation for the **Cybersecurity (CIC0201)** course at the **University of Brasília (UnB)**. Developed during my 6th semester in Computer Science, the project focuses on creating cryptographic tools and exploring their fundamental principles.
 
 The project is divided into two main parts: one for **symmetric cryptography** and one for **asymmetric cryptography with digital signatures**. By implementing the **AES** and **RSA** algorithms, I was able to deepen my understanding of how the theory behind data security is applied in practice, from block encryption to key generation and digital signature verification.
